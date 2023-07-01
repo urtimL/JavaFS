@@ -1,18 +1,19 @@
 package Model;
 
-import java.util.Objects;
-
-public class Emplyee {
+public class Employee {
     protected int id;
     protected String name;
     protected int yearOfBirth;
     protected int experience;
 
-    public Emplyee(int id, String name, int yearOfBirth, int experience) {
+    protected boolean higherEducation;
+
+    public Employee(int id, String name, int yearOfBirth, int experience, boolean higherEducation) {
         this.id = id;
         this.name = name;
         this.yearOfBirth = yearOfBirth;
         this.experience = experience;
+        this.higherEducation = higherEducation;
     }
 
     public int getId() {
@@ -41,18 +42,19 @@ public class Emplyee {
 
     @Override
     public String toString() {
-        return "id=" + id +
-                ", name=" + name +
-                ", yearOfBirth=" + yearOfBirth +
-                ", experience=" + experience;
+        return "id = " + id +
+                ", name = " + name +
+                ", yearOfBirth = " + yearOfBirth +
+                ", experience = " + experience +
+                ", higher education = " + higherEducation;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Emplyee)) return false;
+        if (!(o instanceof Employee)) return false;
 
-        Emplyee emplyee = (Emplyee) o;
+        Employee emplyee = (Employee) o;
 
         return id == emplyee.id;
     }
