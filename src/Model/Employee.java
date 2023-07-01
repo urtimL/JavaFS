@@ -5,7 +5,6 @@ public class Employee {
     protected String name;
     protected int yearOfBirth;
     protected int experience;
-
     protected boolean higherEducation;
 
     public Employee(int id, String name, int yearOfBirth, int experience, boolean higherEducation) {
@@ -32,12 +31,20 @@ public class Employee {
         return experience;
     }
 
+    public boolean isHigherEducation() {
+        return higherEducation;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
 
     public void setExperience(int experience) {
         this.experience = experience;
+    }
+
+    public void setHigherEducation(boolean higherEducation) {
+        this.higherEducation = higherEducation;
     }
 
     @Override
@@ -63,4 +70,6 @@ public class Employee {
     public int hashCode() {
         return id;
     }
+
+
 }

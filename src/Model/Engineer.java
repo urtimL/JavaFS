@@ -10,7 +10,7 @@ public class Engineer extends Employee {
         this.hours = hours;
     }
 
-    public double salary(){
+    public double getSalary(){
         return rate * hours;
     }
 
@@ -19,6 +19,6 @@ public class Engineer extends Employee {
         return "Engineer{" +
                 super.toString() +
                 ", rate = " + rate +
-                ", hours = " + hours + ";";
+                ", hours = " + hours + "};";
     }
 }
